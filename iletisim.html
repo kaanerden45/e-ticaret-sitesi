@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MağazaApp - İletişim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+        <h2><a href="index.html" class="logo-link">MağazaApp</a></h2>
+        <nav style="display: flex; align-items: center; gap: 20px;">
+            <a href="sepet.html" style="font-size: 18px; text-decoration: none; color: white;" title="Sepetim">🛒 <span id="cart-count">0</span></a>
+            <button id="open-drawer-btn" class="nav-link-btn">Ürünler ▾</button>
+        </nav>
+    </header>
+
+    <!-- Yandan Açılır Kategori Menüsü (Drawer) -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <aside id="sidebar-drawer" class="sidebar-drawer">
+        <div class="drawer-header">
+            <h3>Kategoriler</h3>
+            <button id="close-drawer-btn" class="close-drawer">&times;</button>
+        </div>
+        <ul class="drawer-menu">
+            <li><a href="urunler.html?category=Tümü"><span>📦</span> Tüm Ürünler</a></li>
+            <li><a href="urunler.html?category=Elektronik"><span>⚡</span> Elektronik</a></li>
+            <li><a href="urunler.html?category=Aksesuar"><span>🎒</span> Aksesuar</a></li>
+            <li><a href="urunler.html?category=Giyim"><span>👕</span> Giyim</a></li>
+            <li><a href="urunler.html?category=Ev %26 Yaşam"><span>🏠</span> Ev & Yaşam</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-box">
+                <h1>Bize Ulaşın</h1>
+                <p>Soru, öneri ve destek talepleriniz için formu doldurabilirsiniz.</p>
+                
+                <form onsubmit="event.preventDefault(); alert('Mesajınız başarıyla iletildi! En kısa sürede dönüş yapacağız. 🚀');">
+                    <div class="form-group">
+                        <label>Adınız Soyadınız</label>
+                        <input type="text" required placeholder="Adınızı giriniz...">
+                    </div>
+                    <div class="form-group">
+                        <label>E-posta Adresiniz</label>
+                        <input type="email" required placeholder="E-posta adresinizi giriniz...">
+                    </div>
+                    <div class="form-group">
+                        <label>Mesajınız</label>
+                        <textarea rows="4" required placeholder="Mesajınızı yazın..."></textarea>
+                    </div>
+                    <button type="submit" class="contact-submit-btn">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div style="margin-bottom: 10px;">
+            <a href="iletisim.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='#00ff00'" onmouseout="this.style.color='#9ca3af'">İletişim & Destek</a>
+        </div>
+        <p>&copy; 2026 MağazaApp. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
